@@ -1,10 +1,8 @@
-import { object } from "prop-types";
-import { useEffect, useRef , useState } from "react";
+import { useEffect , useState } from "react";
 import { useParams } from "react-router-dom";
 
 const useCountryData = () => {
   const countryName = useParams();
-  // console.log("The country name isssssssssssssssssssss " , countryName.countryName);
   const [countryData,setCountryData] = useState({});
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/name/${countryName.countryName}`)
@@ -15,7 +13,6 @@ const useCountryData = () => {
       const languages = Object.values(data[0].languages);
       const currencies = Object.values(data[0].currencies)[0].name;
       
-      console.log(`The language is isssssssssssssssssssss`,currencies)
       obj.flag = data[0].flags.svg;
       obj.name = data[0].name.common;
       obj.nativeName = langNativeName[0].common;

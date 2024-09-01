@@ -1,4 +1,5 @@
 import Typography from "../typography/typography";
+import style from "./textCards.module.css";
 
 export const TextCardTitle = ({component,variant,children}) => {
   return(
@@ -14,10 +15,10 @@ export const TextCardBody = ({children,...props}) => {
   );
 }
 
-export const TextCards = ({children,...props}) => {
+export const TextCards = ({direction,children,...props}) => { 
   return(
     <>
-      <div {...props}>{children}</div>
+      <div className={ `${style.cardText} ${style[direction]}`} {...props}>{children}</div>
     </>
   );
 }

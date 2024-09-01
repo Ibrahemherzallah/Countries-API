@@ -1,7 +1,7 @@
-import styles from './button-group.module.css';
-const ButtonGroup = ({children})=>{
+import styles from './buttons-group.module.css';
+const ButtonGroup = ({direction,children})=>{
   return(
-    <div className={styles.buttons}>
+    <div className= { `${styles.buttons} ${styles[direction]}`}>
       {children}
     </div>
   );

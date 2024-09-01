@@ -25,12 +25,17 @@
 }
 .countriesDiv {
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
+  grid-template-columns: repeat(auto-fit,minmax(230px,0.5fr));
   align-items: center;
-  justify-content: center;
   width: 80%;
   flex-wrap:wrap;
   gap: 5em;
+}
+@media screen and (max-width:900px) {
+  .countriesDiv {
+  justify-content: center;
+
+  }
 }
 .mainContent {
   display: flex;
@@ -38,4 +43,16 @@
   gap: 1.5em;
   padding-inline: 5em;
   margin-top: 3%;
+}
+.sideBarFlag {
+  object-fit: cover;
+  width: 45px;
+  height: 25px;
+}
+.sideBarFlagDiv {
+    display: flex;
+    align-items: center;
+}
+.countryName {
+  margin-left: 10px;
 }

@@ -2,9 +2,7 @@ import style from './dropdown.module.css';
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import useToggle from '../../hooks/useToggle';
 export const DropDownOption = ({value,children}) => {
-  const {isToggle,handleToggle} = useToggle();
 
   return(
       <li className={style.option} value={value}>{children}</li>

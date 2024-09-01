@@ -9,4 +9,3 @@ const InputWithIcon = ({icon,placeholder,...props}) => {
   );
 } 
 export default InputWithIcon;
-/*onChange={(e)=>{setSearch(e.target.value) ;console.log("The search is" , e.target.value);}}*/

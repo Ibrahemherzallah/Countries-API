@@ -1,0 +1,16 @@
+.cardText {
+  display: flex;
+  padding:1em;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+@media screen and (max-width:700) {
+  .cardText {
+    width: 100%;
+    align-items: flex-start;
+  }
+}

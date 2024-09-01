@@ -2,12 +2,12 @@ import { NavBar } from "../container/navBar";
 import style from './countryDetail.module.css';
 import Button from "../components/buttons/button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'; // or '@fortawesome/free-light-svg-icons'  
-import { Link, useParams } from "react-router-dom";
+import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'; 
+import { Link } from "react-router-dom";
 import Flex from '../components/flex/flex.jsx';
 import {TextCardTitle,TextCards,TextCardBody} from "../components/cards/textCards.jsx";
 import Typography from "../components/typography/typography.jsx";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/themeContext.jsx";
 import useCountryData from "../hooks/useCountryData.jsx";
 
@@ -21,7 +21,7 @@ const CountryDetail = ({width}) => {
     <div className={style.countryDetailsPage}>
       <NavBar />
       <Link to={'/'} className={style.backBtn} style={{textDecoration:'none',color:'black',marginLeft:`${width < 700 ? '4%' : ''}`}}>
-        <Button variant={variant}   style={{
+        <Button style={{
           boxShadow: `0px 0px 5px -1px var(--${variant})`,
           display: 'flex',
           justifyContent: 'center',
@@ -37,7 +37,7 @@ const CountryDetail = ({width}) => {
       
       <div className={style.countryDetails}>
         <img className={style.countyFlag} src={countryData.flag} alt="" />
-        <TextCards style={{padding:'1em',display:'flex',flexDirection:'column',width:`${width < 700 ? '100%' : ''}`, alignItems:`${width < 700 ? 'flex-start' : ''}` }}>
+        <TextCards direction={'column'}>
           <TextCardTitle component={'h1'} variant={width > 1200 ? 'h1' : 'h3'}>{countryData.name}</TextCardTitle>
           <TextCardBody>  
             <div className={style.detailsDiv}>  

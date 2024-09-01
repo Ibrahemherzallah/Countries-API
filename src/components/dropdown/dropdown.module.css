@@ -1,0 +1,75 @@
+.dropDown {
+  width:80%;
+  height: 3.5em;
+  background-color: var(--element-color);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 10px -4px var(--shadow-color);
+  color: var(--font-color);
+}
+@media screen and (min-width: 540px) and (max-width: 700px) {
+  .dropDown {   
+      margin-left: 0.5em;
+      width: 50%;
+  }
+}
+.icon {
+  transition: 0.4s;
+}
+.active .dropDownBtn .icon {
+  transform: rotate(-180deg);
+}
+.dropDown .dropDownBtn {
+  white-space: nowrap;
+  display: flex;
+  height: 55px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+  justify-content:space-between;
+  gap: 1em;
+}
+@media screen and (max-width:540px)
+{
+    .dropDown
+    {   
+      margin-left: 0.5em;
+      width: 65%;
+    }
+    .dropDown .dropDownBtn
+    {
+      font-size: 12px;
+      gap: 0px;
+    }
+}
+@media screen and (max-width:360px)
+{
+    .dropDown .dropDownBtn
+    {
+      padding: 5px;
+    }
+}
+.dropDown .options {
+  list-style: none;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  color: var(--font-color);
+  background-color: var(--element-color);
+  box-shadow: 0px 0px 10px -4px var(--shadow-color);
+}
+.option {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  cursor: pointer;
+  height:2.5em;
+} 
+.option:hover {
+  background-color: var(--hover-color);
+}

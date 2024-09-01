@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4em;
+}
+.direction-row {
+  flex-direction: row;
+}
+.direction-column {
+  flex-direction: column;
+}
+.gap-xlarge {
+  gap: 24em;
+}
+.gap-large {
+  gap: 18em;
+}
+.gap-medium {
+  gap: 12em;
+}
+.gap-small {
+  gap: 6em;
+}
+.gap-xsmall {
+  gap: 2em;
+}

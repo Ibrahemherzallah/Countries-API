@@ -1,0 +1,29 @@
+.inputDiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em; 
+}
+.input {
+  position: relative;
+  z-index: 1;
+  padding: 1.2em;
+  padding-left: 5em;
+  width: 100%;
+  border-radius: 3px;
+  color: var(--font-color);
+  background-color: var(--element-color);
+  border: none;
+  box-shadow: 0px 0px 10px -3px var(--shadow-color);
+  outline: none;
+}
+.icon {
+  position: absolute;
+  z-index: 2;
+  padding-inline: 2em;
+
+}
+.input::placeholder {
+  color: rgb(156, 158, 153);
+}
+  

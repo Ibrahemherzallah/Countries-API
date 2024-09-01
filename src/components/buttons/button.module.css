@@ -1,0 +1,83 @@
+.btn{
+  background: var(--btn-bg);
+  border: none;
+  color: var(--light);
+  padding: 5px 10px;  
+  border-radius: 5px;
+  font-size: var(--m);
+}
+.btn.primary {
+  --btn-bg:var(--primary);
+  --btn-bg-hover:rgba(var(--primary-rgb),0.9);
+  --btn-bg-active:rgba(var(--primary-rgb),0.75);
+  --btn-bg-focus:rgba(var(--primary-rgb),0.65);
+}
+.btn.secondary{
+  --btn-bg: var(--secondary);
+  --btn-bg-hover: rgba(var(--secondary-rgb),0.85);
+  --btn-bg-active: rgba(var(--secondary-rgb),0.75);
+  --btn-bg-focus: rgba(var(--secondary-rgb),0.65); 
+}
+.btn.tertiary{
+  --btn-bg: var(--tertiary);
+  --btn-bg-hover: rgba(var(--tertiary-rgb),0.8);
+  --btn-bg-active: rgba(var(--tertiary-rgb),0.7);
+  --btn-bg-focus: rgba(var(--tertiary-rgb),0.6); 
+}
+.btn.danger{
+  --btn-bg: var(--danger);
+  --btn-bg-hover: rgba(var(--danger-rgb),0.8);
+  --btn-bg-active: rgba(var(--danger-rgb),0.7);
+  --btn-bg-focus: rgba(var(--danger-rgb),0.6); 
+}
+.btn.warning{
+  --btn-bg: var(--warning);
+  --btn-bg-hover: rgba(var(--warning-rgb),0.8);
+  --btn-bg-active: rgba(var(--warning-rgb),0.7);
+  --btn-bg-focus: rgba(var(--warning-rgb),0.6);
+}
+.btn.success{
+  --btn-bg: var(--success);
+  --btn-bg-hover: rgba(var(--success-rgb),0.8);
+  --btn-bg-active: rgba(var(--success-rgb),0.7);
+  --btn-bg-focus: rgba(var(--success-rgb),0.6); 
+}
+.btn.dark{
+  --btn-bg: var(--dark);
+  --btn-bg-hover: rgba(var(--dark-rgb),0.8);
+  --btn-bg-active: rgba(var(--dark-rgb),0.7);
+  --btn-bg-focus: rgba(var(--dark-rgb),0.6); 
+}
+.btn.light {
+  color: var(--black);
+  --btn-bg: var(--light);
+  --btn-bg-hover: rgba(var(--light-rgb),0.8);
+  --btn-bg-active: rgba(var(--light-rgb),0.7);
+  --btn-bg-focus: rgba(var(--light-rgb),0.6); 
+}
+.btn:hover{
+  background-color: var(--btn-bg-hover);
+  cursor: pointer;
+}
+.btn:active{
+  background-color: var(--btn-bg-active);
+}
+.btn:focus{  
+  outline: none;
+  background-color: var(--btn-bg-focus);
+}
+.xs{
+  font-size: var(--xs);
+}
+.sm{
+  font-size: var(--sm);
+}
+.md{
+  font-size: var(--md);
+}
+.lg{
+  font-size: var(--lg);
+}
+.xl{
+  font-size: var(--xl);
+}

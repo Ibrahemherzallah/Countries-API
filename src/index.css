@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+}
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+:root {
+  --primary-rgb: 13, 110, 253;
+  --secondary-rgb: 108, 117, 128;
+  --tertiary-rgb: 21, 49, 71;
+  --danger-rgb: 220, 53, 69;
+  --warning-rgb: 255, 193, 7;
+  --success-rgb: 25, 135, 84;
+  --info-rgb: 13 202 249;
+
+  --primary:rgb(var(--primary-rgb));
+  --secondary:rgb(var(--secondary-rgb));
+  --tertiary:rgb(var(--tertiary-rgb));
+  --danger:rgb(var(--danger-rgb));
+  --warning:rgb(var(--warning-rgb));
+  --success:rgb(var(--success-rgb));
+  --info:rgb(var(--info-rgb));
+
+  --dark:#2b3945;
+  --dark-shadow:#111517;
+  --light-shadow:  #858585;
+  --light:#fafafa;
+
+  --xl: 1.9em;
+  --lg: 1.6em;
+  --md: 1.3em;
+  --sm: 1em;
+  --xs: 0.7em;
+}

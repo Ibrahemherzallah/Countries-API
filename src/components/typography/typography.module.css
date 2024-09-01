@@ -1,0 +1,35 @@
+.h1{
+  font-size: var(--xl);
+  font-weight: 800;
+}
+.h2{
+  font-size: var(--lg);
+  font-weight: 800;
+}
+.h3{
+  font-size: var(--md);
+  font-weight: 800;
+}
+.h4{
+  font-size: var(--sm);
+  font-weight: 800;
+}
+.h5{
+  font-size: var(--xs);
+  font-weight: 800;
+}
+.xs{
+  font-size: var(--xs);
+}
+.sm{
+  font-size: var(--sm);
+}
+.md{
+  font-size: var(--md);
+}
+.lg{
+  font-size: var(--lg);
+}
+.xl{
+  font-size: var(--xl);
+}

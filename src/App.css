@@ -1,12 +1,13 @@
 #light {
   min-height: 100vh;
   background-color: var(--background-color);
-  --background-color: #ffffff;
-  --element-color: #fafafa;
-  --hover-color: #D0D0D0;
+  --element-color: #ffffff;
+  --background-color: #fafafa;
+  --hover-color: #f1f1f1; 
   --sidebar-shadow-color: #f7f7f7;
   --shadow-color: #858585;
   --font-color: #111517;
+  --circle: #f0f0f0;
 }
 #dark {
   min-height: 100vh;
@@ -17,4 +18,5 @@
   --sidebar-shadow-color: #25292a;
   --shadow-color: #111517; 
   --font-color: #fafafa;
-}
+  --circle: var(--background-color);
+} 

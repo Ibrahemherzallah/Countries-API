@@ -1,4 +1,3 @@
-// import { createContext, useState } from 'react'
 import { ThemeContext } from './context/themeContext';
 import './App.css'
 import HomePage from './pages/homePage';
@@ -6,9 +5,6 @@ import useTheme from './hooks/useTheme';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import CountryDetail from './pages/countryDetail';
 import { useEffect, useState } from 'react';
-import Button from './components/buttons/button';
-import useLocalStorage from './hooks/useLocalStorage';
-import { DropDown , DropDownOption } from './components/dropdown/dropdown';
 
 function App() {
     const {getItem,handleTheme} = useTheme();

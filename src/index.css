@@ -23,10 +23,8 @@ body {
   --success:rgb(var(--success-rgb));
   --info:rgb(var(--info-rgb));
 
-  --dark:#2b3945;
-  --dark-shadow:#111517;
-  --light-shadow:  #858585;
-  --light:#fafafa;
+  --light:#ffffff;
+  --dark: #2b3945; 
 
   --xl: 1.9em;
   --lg: 1.6em;

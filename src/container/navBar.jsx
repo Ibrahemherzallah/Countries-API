@@ -8,19 +8,20 @@ import {NavBarBrand} from '../components/navBar/navBarBrand';
 import {NavBarTheme} from '../components/navBar/navBarTheme';
 import style from '../components/navBar/navBar.module.css';
 
-export function NavBar() {
+export function NavBar({width}) {
   const {isDark,handleTheme} = useContext(ThemeContext);
   let mode = isDark? 'Light Mode' : 'Dark Mode';
   let variant = isDark?'dark' :'light';
   let icon = isDark? 
     <FontAwesomeIcon icon={faSun} className={style.navIcon} /> :  
-    <FontAwesomeIcon icon={faMoon} style={{ transform:"rotate(-20deg)"}}/>
+    <FontAwesomeIcon icon={faMoon} className={style.navIcon}/>
   return(
       <header className={style.nav}>
-        <NavBarBrand>Where is the world ?</NavBarBrand>
-        <NavBarTheme>
-          <Button variant={variant} size={'sm'} style={{marginBlock:'-5px'}} onClick={handleTheme}>
+        <NavBarBrand width={width}>Where is the world ?</NavBarBrand>
+        <NavBarTheme width={width}>
+          <Button variant={variant} size={'sm'} style={{marginBlock:'-5px',fontWeight:'600'}} onClick={handleTheme}>
             {icon}
+            &nbsp;
             &nbsp;
             {mode}
           </Button>  

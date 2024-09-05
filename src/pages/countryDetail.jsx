@@ -20,37 +20,40 @@ const CountryDetail = ({width}) => {
   return(
     <div className={style.countryDetailsPage}>
       <NavBar />
-      <Link to={'/'} className={style.backBtn} style={{textDecoration:'none',color:'black',marginLeft:`${width < 700 ? '4%' : ''}`}}>
+      <Link to={'/'} className={style.backBtn} style={{textDecoration:'none',color:'black'}}>
         <Button style={{
-          boxShadow: `0px 0px 5px -1px var(--${variant})`,
+          boxShadow: `0 0 4px 2px rgba(0, 0, 0, 0.1)`,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          paddingInline: '1.5em',
-          color:`var(--${color})`
+          paddingInline: '2.5em',
+          height:'2.5em',
+          backgroundColor:`var(--element-color)`,
+          color: `var(--${color})`,
+          fontSize: '14px'
         }}>
-          <FontAwesomeIcon icon={faArrowLeftLong} style={{ color:'var(--{{color}.color})'}} />
+          <FontAwesomeIcon icon={faArrowLeftLong} style={{ color:'var(--{{color}.color})',fontSize: '15px'}} />
           &nbsp;
           Back
         </Button>
       </Link>
       
       <div className={style.countryDetails}>
-        <img className={style.countyFlag} src={countryData.flag} alt="" />
+        <img className={style.countyFlag} src={countryData?.flag} alt={`${countryData?.name}-flag`} />
         <TextCards direction={'column'}>
-          <TextCardTitle component={'h1'} variant={width > 1200 ? 'h1' : 'h3'}>{countryData.name}</TextCardTitle>
+          <TextCardTitle component={'h1'} variant={width > 1200 ? 'h1' : 'h3'}>{countryData?.name}</TextCardTitle>
           <TextCardBody>  
             <div className={style.detailsDiv}>  
               <div>
-                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Native Name: </b>{countryData.nativeName}</Typography>
-                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Population: </b>{countryData.population}</Typography>
-                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Region: </b>{countryData.region}</Typography>
-                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Sub Region:</b>{countryData.subregion}</Typography>
-                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Capital:</b> {countryData.capital}</Typography>
+                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Native Name: </b>{countryData?.nativeName}</Typography>
+                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Population: </b>{countryData?.population?.toLocaleString('en', {useGrouping:true})}</Typography>
+                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Region: </b>{countryData?.region}</Typography>
+                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Sub Region:</b>{countryData?.subregion}</Typography>
+                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Capital:</b> {countryData?.capital}</Typography>
               </div>
               <div>
-                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Top Level Domain: </b>{countryData.topLevelDomain}</Typography>
-                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Currencies: </b>{countryData.currencies}</Typography>
+                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Top Level Domain: </b>{countryData?.topLevelDomain}</Typography>
+                <Typography component={'p'} style={{marginBlock:'10px'}}><b>Currencies: </b>{countryData?.currencies}</Typography>
                 <Typography component={'p'} style={{marginBlock:'10px'}}><b>Languages: </b>
                   {
                     countryData?.languages?.map((item,index) => {return index < 2 ? item : null }).join(',')
@@ -58,8 +61,8 @@ const CountryDetail = ({width}) => {
                 </Typography>
               </div>
             </div>
-            <Flex style={{justifyContent:'flex-start',gap:'1em',marginTop: `${width > 1200 ? '5%' : '1%'}` , fontSize: `${width<700 ? '0.6em' :''}`}}>
-              <b>Border Countries:</b>
+            <Flex style={{justifyContent:'flex-start',gap:'0.5em',marginTop: `${width > 1200 ? '8%' : '1%'}`,padding:'0px' , fontSize: `${width<700 ? '0.6em' :''}`}}>
+              <span className={style.btnDescription}>Border Countries:</span>
               {
                 countryData?.borderCountries?.slice(0, 3).map((borderCountry, index) => (
                   <Button 
@@ -67,9 +70,10 @@ const CountryDetail = ({width}) => {
                     variant={variant} 
                     size={'xs'}
                     style={{ 
-                      boxShadow: `0px 0px 5px -2px var(--${variant})`, 
-                      paddingInline: '2.5em', 
-                      color: `var(--${color})` 
+                      boxShadow: `0 0 3px -1px var(--shadow-color)`, 
+                      paddingInline: '3em', 
+                      color: `var(--${color})`,
+                      borderRadius: '2px',
                     }}
                   >
                     {borderCountry}
